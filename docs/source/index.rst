@@ -24,6 +24,8 @@ Table of Contents
 1. User Documentation
 2. Technical Documentation
 
+.. _user-documentation:
+
 User Documentation
 ==================
 
@@ -75,6 +77,8 @@ Contributors
 ------------
 
 The Birthday Tracker Application was created by [Your Name] and is maintained by Christoph Hartleb.
+
+.. _technical-documentation:
 
 Technical Documentation
 =======================

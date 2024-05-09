@@ -30,3 +30,9 @@ html_static_path = ['_static']
 # -- Options for build input -------------------------------------------------
 # 
 source_suffix = ['.rst']
+
+# Enable domain-specific indices (including the general index)
+html_domain_indices = True
+
+# Enable autodoc extension
+extensions = ['sphinx.ext.autodoc']

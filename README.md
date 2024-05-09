@@ -1,10 +1,27 @@
 # Birthday Manager
 
-## :newspaper: About the project
+## About the project
 
 Birthday Manager is a simple web application built with Flask that allows users to add and manage birthday entries in a database. Users can add names along with their corresponding birth months and days, and view all stored entries.
 
-### Content overview
+## Table of Contents
+- [Birthday Manager](#birthday-manager)
+  - [About the project](#about-the-project)
+  - [Table of Contents](#table-of-contents)
+    - [Directory directory structure](#directory-directory-structure)
+  - [Features](#features)
+  - [Getting started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Read the docs](#read-the-docs)
+    - [Run the app](#run-the-app)
+    - [Run the application in a Docker container:](#run-the-application-in-a-docker-container)
+    - [Update the `instance\birthdays_db.db` file because of db model changes](#update-the-instancebirthdays_dbdb-file-because-of-db-model-changes)
+  - [Resources used to create this project](#resources-used-to-create-this-project)
+  - [License](#license)
+  - [COPYRIGHT](#copyright)
+  - [Code of Conduct](#code-of-conduct)
+
+### Directory directory structure
 
     .
     ├── docs/ - documentation sources
@@ -18,13 +35,13 @@ Birthday Manager is a simple web application built with Flask that allows users 
     ├── README.md - project descriptions and instructions
     └── requirements.txt - project requirements
 
-## :notebook: Features
+## Features
 
 * Add and delete new birthday entries.
 * View all stored birthday entries.
 * Simple and intuitive user interface.
 
-## :runner: Getting started
+## Getting started
 
 ### Prerequisites
 
@@ -52,13 +69,12 @@ cd birthdays-management
 pip3 install -r requirements.txt
 ```
 
-### Read the documentation
+### Read the docs
 
-0. Read the documentation of the project:
+- [HTML](/docs/build/html/index.html)
+- [PDF](/docs/build/latex/birthdaysmanagement.pdf)
 
-[Birthdays Management Documentation](/docs/build/html/index.html)
-
-### Run the application
+### Run the app
 
 0. Run script to see how it works:
 
@@ -102,7 +118,7 @@ flask db migrate -m "describe your changes"
 flask db upgrade
 ```
 
-## :books: Resources used to create this project
+## Resources used to create this project
 
 * Python
   * [Python 3.12 documentation](https://docs.python.org/3/)
@@ -125,6 +141,14 @@ flask db upgrade
 * Editor
   * [Visual Studio Code](https://code.visualstudio.com/)
 
-## :bookmark: License
+## License
 
 This project is licensed under the terms of the [MIT License](LICENSE).
+
+## COPYRIGHT
+
+See the [COPYRIGHT](COPYRIGHT) file for copyright and licensing details.
+
+## Code of Conduct
+
+Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing to this project.
