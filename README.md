@@ -1,67 +1,119 @@
-Birthday Manager
+# Birthday Manager
+
+## :newspaper: About the project
 
 Birthday Manager is a simple web application built with Flask that allows users to add and manage birthday entries in a database. Users can add names along with their corresponding birth months and days, and view all stored entries.
-Features
 
-    Add new birthday entries.
-    View all stored birthday entries.
-    Simple and intuitive user interface.
+### Content overview
 
-Prerequisites
+    .
+    ├── docs/ - documentation sources
+    ├── instance/ - database
+    ├── migrations/ - generated migrations scripts byFlask-Migrate. Files in there should be deleted when database has to be generated from scratch.
+    ├── static/ - contains static files (css, js)
+    ├── templates/ - contains html templates
+    ├── tests/ - all kinds of test scripts
+    ├── app.py - flask application and program entry
+    ├── LICENSE - license file
+    ├── README.md - project descriptions and instructions
+    └── requirements.txt - project requirements
 
-Before running the application, ensure you have the following installed:
+## :notebook: Features
 
-    Python 3
-    Flask
-    Flask-SQLAlchemy
-    Flask-Migrate
+* Add and delete new birthday entries.
+* View all stored birthday entries.
+* Simple and intuitive user interface.
 
-Installation
+## :runner: Getting started
 
-    Clone the repository:
+### Prerequisites
 
-    bash
+0. Clone the repository:
 
-git clone https://github.com/your-username/birthday-manager.git
+```sh
+git clone https://github.com/CH6832/birthdays-management.git
+```
 
-Navigate into the project directory:
+1. Extract the repository:
 
-bash
+```sh
+tar -xf birthdays-management.zip
+```
 
-cd birthday-manager
+2. Navigate into root directory:
 
-Install dependencies:
+```sh
+cd birthdays-management
+```
 
-    pip install -r requirements.txt
+3. Install requirements:
 
-Usage
+```sh
+pip3 install -r requirements.txt
+```
 
-    Run the Flask application:
+### Run the application
 
-    python app.py
+0. Run script to see how it works:
 
-    Access the application in your web browser at http://localhost:5000.
+```sh
+python main.py "tests\\test_script.py"
+```
 
-    To add a new birthday entry, fill out the form on the main page and click "Add".
+### Run the application in a Docker container:
 
-    To view all stored birthday entries, simply visit the main page.
+0. Build the docker image
 
-Contributing
+```sh
+docker build -t flask-app .
+```
 
-Contributions are welcome! If you'd like to contribute to Birthday Manager, please follow these steps:
+1. Run the docker container:
 
-    Fork the repository.
-    Create a new branch (git checkout -b feature/your-feature).
-    Make your changes.
-    Commit your changes (git commit -am 'Add new feature').
-    Push to the branch (git push origin feature/your-feature).
-    Create a new Pull Request.
+```sh
+docker run -d -p 5000:5000 flask-app
+```
 
-License
+2. FLask application is now running in a docker container reachable in your webbrowser:
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-Acknowledgements
+```sh
+http://localhost:5000
+```
 
-    This project was inspired by the need for a simple birthday management system.
-    Thanks to the Flask and SQLAlchemy developers for creating such powerful tools.
+### Update the `instance\birthdays_db.db` file because of db model changes
 
+0. Make changes to 'UserModel' class in `app.py`
+
+1. Generate migration scripts in `migrations` folder:
+
+```sh
+flask db migrate -m "describe your changes"
+```
+
+2. Apply the migrations:
+
+```sh
+flask db upgrade
+```
+
+## :books: Resources used to create this project
+
+* Python
+  * [Python 3.12 documentation](https://docs.python.org/3/)
+  * [Built-in Functions](https://docs.python.org/3/library/functions.html)
+  * [Python Module Index](https://docs.python.org/3/py-modindex.html)
+  * [Logging HOWTO](https://docs.python.org/3/howto/logging.html)
+  * [ast — Abstract Syntax Trees](https://docs.python.org/3/library/ast.html)
+  * [unittest — Unit testing framework](https://docs.python.org/3/library/unittest.html)
+  * [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/)
+* Markdwon
+  * [Basic syntax](https://www.markdownguide.org/basic-syntax/)
+  * [Complete list of github markdown emofis](https://dev.to/nikolab/complete-list-of-github-markdown-emoji-markup-5aia)
+  * [Awesome template](http://github.com/Human-Activity-Recognition/blob/main/README.md)
+  * [.gitignore file](https://git-scm.com/docs/gitignore)
+* Editor
+  * [Visual Studio Code](https://code.visualstudio.com/)
+
+## :bookmark: License
+
+This project is licensed under the terms of the [MIT License](LICENSE).
