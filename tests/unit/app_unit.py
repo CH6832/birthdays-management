@@ -1,5 +1,5 @@
 import unittest
-from app import app, birthdays_db, UserModel
+from ...app import app, birthdays_db, UserModel
 
 
 class TestApp(unittest.TestCase):

@@ -1,5 +1,5 @@
 import pytest
-from app import app, birthdays_db, UserModel
+from ...app import app, birthdays_db, UserModel
 
 
 @pytest.fixture
