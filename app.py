@@ -33,13 +33,16 @@ class UserModel(birthdays_db.Model):
     """User model for name and birthday data"""
     # name = request.form["name"]
     name = birthdays_db.Column(birthdays_db.String(20), unique=False, nullable=False, primary_key=True)
+    # year
+    year = birthdays_db.Column(birthdays_db.Integer, nullable=False)
     # month = request.form["month"]
     month = birthdays_db.Column(birthdays_db.Integer, nullable=False)
     # day = request.form["day"]
     day = birthdays_db.Column(birthdays_db.Integer, nullable=False)
 
+
     def __repr__(self):
-        return f"Name : {self.name}, Month: {self.month}, Day: {self.day}"
+        return f"Name : {self.name}, Year: {self.year} Month: {self.month}, Day: {self.day}"
 
 @app.route("/",)
 def index():
@@ -53,9 +56,10 @@ def profile():
     name = request.form.get("name")
     month = request.form.get("month")
     day = request.form.get("day")
+    year = request.form.get("year")
 
-    if name != '' and month is not None and day is not None:
-        user_profile = UserModel(name=name, month=month, day=day)
+    if name != '' and year is not None and month is not None and day is not None:
+        user_profile = UserModel(name=name, year=year, month=month, day=day)
         birthdays_db.session.add(user_profile)
         birthdays_db.session.commit()
         return redirect('/')
