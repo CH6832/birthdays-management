@@ -52,6 +52,12 @@ cd birthdays-management
 pip3 install -r requirements.txt
 ```
 
+### Read the documentation
+
+0. Read the documentation of the project:
+
+[Birthdays Management Documentation](/docs/build/html/index.html)
+
 ### Run the application
 
 0. Run script to see how it works:
@@ -102,10 +108,15 @@ flask db upgrade
   * [Python 3.12 documentation](https://docs.python.org/3/)
   * [Built-in Functions](https://docs.python.org/3/library/functions.html)
   * [Python Module Index](https://docs.python.org/3/py-modindex.html)
-  * [Logging HOWTO](https://docs.python.org/3/howto/logging.html)
-  * [ast — Abstract Syntax Trees](https://docs.python.org/3/library/ast.html)
-  * [unittest — Unit testing framework](https://docs.python.org/3/library/unittest.html)
   * [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/)
+* Flask
+  * [Flask](https://flask.palletsprojects.com/en/3.0.x/)
+* HTML
+  * [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* CSS
+  * [CSS: Cascading Style Sheets - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=de)
+* Docker
+  * [Docker Docs](https://docs.docker.com/)
 * Markdwon
   * [Basic syntax](https://www.markdownguide.org/basic-syntax/)
   * [Complete list of github markdown emofis](https://dev.to/nikolab/complete-list-of-github-markdown-emoji-markup-5aia)
