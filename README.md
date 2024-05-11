@@ -1,4 +1,4 @@
-# Birthday Manager
+# Birthdays Manager
 
 ## About the project
 
@@ -143,7 +143,7 @@ flask db upgrade
 * Editor
   * [Visual Studio Code](https://code.visualstudio.com/)
 
-## License
+## :bookmark: License
 
 This project is licensed under the terms of the [MIT License](LICENSE).
 
