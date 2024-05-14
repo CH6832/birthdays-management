@@ -76,14 +76,6 @@ pip3 install -r requirements.txt
 - [HTML](/docs/build/html/index.html)
 - [PDF](/docs/build/latex/birthdaysmanagement.pdf)
 
-### Run the app
-
-0. Run script to see how it works:
-
-```sh
-python main.py "tests\\test_script.py"
-```
-
 ### Run the application in a Docker container:
 
 0. Build the docker image
