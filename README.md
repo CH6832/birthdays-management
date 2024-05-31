@@ -18,9 +18,9 @@ Birthday Manager is a simple web application built with Flask that allows users 
     - [Build the docs](#build-the-docs)
     - [Update database](#update-database)
   - [Resources used to create this project](#resources-used-to-create-this-project)
-  - [:bookmark: License](#bookmark-license)
-  - [:copyright: Copyright](#copyright-copyright)
-  - [:straight\_ruler: Code of Conduct](#straight_ruler-code-of-conduct)
+  - [License](#bookmark-license)
+  - [Copyright](#copyright-copyright)
+  - [Code of Conduct](#straight_ruler-code-of-conduct)
 
 ### Directory directory structure
 
@@ -156,14 +156,14 @@ flask db upgrade
 * Editor
   * [Visual Studio Code](https://code.visualstudio.com/)
 
-## :bookmark: License
+## License
 
 This project is licensed under the terms of the [MIT License](LICENSE).
 
-## :copyright: Copyright
+## Copyright
 
 See the [COPYRIGHT](COPYRIGHT) file for copyright and licensing details.
 
-## :straight_ruler: Code of Conduct
+## Code of Conduct
 
 Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing to this project.
