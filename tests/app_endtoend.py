@@ -1,4 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""app_endtoend.py"""
+
+import os
+import sys
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(project_root)
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time
 
 def test_index_page():
@@ -20,15 +30,15 @@ def test_add_and_delete_birthday():
     driver.get('http://localhost:5000')
 
     # Add a birthday entry
-    name_input = driver.find_element_by_id('name')
+    name_input = driver.find_element(By.ID, 'name')
     name_input.send_keys('John')
-    year_input = driver.find_element_by_id('year')
+    year_input = driver.find_element(By.ID, 'year')
     year_input.send_keys('1990')
-    month_input = driver.find_element_by_id('month')
+    month_input = driver.find_element(By.ID, 'month')
     month_input.send_keys('5')
-    day_input = driver.find_element_by_id('day')
+    day_input = driver.find_element(By.ID, 'day')
     day_input.send_keys('10')
-    add_button = driver.find_element_by_class_name('add-btn')
+    add_button = driver.find_element(By.CLASS_NAME, 'add-btn')
     add_button.click()
 
     # Wait for redirect
@@ -38,7 +48,7 @@ def test_add_and_delete_birthday():
     assert 'John' in driver.page_source
 
     # Delete the added user
-    delete_button = driver.find_element_by_xpath('//button[contains(text(), "Delete")]')
+    delete_button = driver.find_element(By.XPATH, '//button[contains(text(), "Delete")]')
     delete_button.click()
 
     # Wait for redirect

@@ -1,5 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""app_integration.py"""
+
+import os
+import sys
 import pytest
-from ...app import app, birthdays_db, UserModel
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(project_root)
+from ..app import app, birthdays_db, UserModel
 
 
 @pytest.fixture

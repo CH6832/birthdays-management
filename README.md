@@ -5,21 +5,22 @@
 Birthday Manager is a simple web application built with Flask that allows users to add and manage birthday entries in a database. Users can add names along with their corresponding birth months and days, and view all stored entries.
 
 ## Table of Contents
-- [Birthday Manager](#birthday-manager)
+- [Birthdays Manager](#birthdays-manager)
   - [About the project](#about-the-project)
   - [Table of Contents](#table-of-contents)
     - [Directory directory structure](#directory-directory-structure)
   - [Features](#features)
   - [Getting started](#getting-started)
     - [Prerequisites](#prerequisites)
+    - [Run the application](#run-the-application)
     - [Read the docs](#read-the-docs)
-    - [Run the app](#run-the-app)
     - [Run the application in a Docker container:](#run-the-application-in-a-docker-container)
-    - [Update the `instance\birthdays_db.db` file because of db model changes](#update-the-instancebirthdays_dbdb-file-because-of-db-model-changes)
+    - [Build the docs](#build-the-docs)
+    - [Update database](#update-database)
   - [Resources used to create this project](#resources-used-to-create-this-project)
-  - [License](#license)
-  - [COPYRIGHT](#copyright)
-  - [Code of Conduct](#code-of-conduct)
+  - [:bookmark: License](#bookmark-license)
+  - [:copyright: Copyright](#copyright-copyright)
+  - [:straight\_ruler: Code of Conduct](#straight_ruler-code-of-conduct)
 
 ### Directory directory structure
 
@@ -53,22 +54,22 @@ Birthday Manager is a simple web application built with Flask that allows users 
 git clone https://github.com/CH6832/birthdays-management.git
 ```
 
-1. Extract the repository:
-
-```sh
-tar -xf birthdays-management.zip
-```
-
-2. Navigate into root directory:
+1. Navigate into root directory:
 
 ```sh
 cd birthdays-management
 ```
 
-3. Install requirements:
+2. Install requirements:
 
 ```sh
 pip3 install -r requirements.txt
+```
+
+### Run the application
+
+```sh
+py app.py
 ```
 
 ### Read the docs
@@ -96,7 +97,27 @@ docker run -d -p 5000:5000 flask-app
 http://localhost:5000
 ```
 
-### Update the `instance\birthdays_db.db` file because of db model changes
+### Build the docs
+
+0. Move into `docs` folder
+
+```sh
+cd docs
+```
+
+1. Initilaize project:
+
+```sh
+sphinx-quickstart 
+```
+
+2. Build/rebuild the documentation:
+
+```sh
+make html
+```
+
+### Update database
 
 0. Make changes to 'UserModel' class in `app.py`
 

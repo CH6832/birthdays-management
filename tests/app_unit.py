@@ -1,5 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""app_unit.py"""
+
+import os
+import sys
 import unittest
-from ...app import app, birthdays_db, UserModel
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(project_root)
+from ..app import app, birthdays_db, UserModel
 
 
 class TestApp(unittest.TestCase):
